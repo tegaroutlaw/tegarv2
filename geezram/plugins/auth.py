@@ -79,7 +79,7 @@ async def auth(client, message: Message, _):
             if user_id not in get:
                 get.append(user_id)
         await save_authuser(message.chat.id, token, assis)
-        await message.("CAACAgUAAx0CZOVXzQABAvGbY5DObBzUsIavgfPE2tblWS-QrwwAAigFAAKwP0hUAYhOUixEm_weBA")
+        await message.reply_sticker("CAACAgUAAx0CZOVXzQABAvGbY5DObBzUsIavgfPE2tblWS-QrwwAAigFAAKwP0hUAYhOUixEm_weBA")
         return await message.reply_text("**» ᴀᴅᴅᴇᴅ ᴛᴏ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ ᴏꜰ ʏᴏᴜʀ ɢʀᴏᴜᴘ.**")
     else:
         await message.reply_text("**» ᴀʟʀᴇᴀᴅʏ ɪɴ ᴛʜᴇ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ.**")
