@@ -288,7 +288,7 @@ class Call(PyTgCalls):
                     stream,
                     stream_type=StreamType().pulse_stream,
                 )
-            except Exception as e:
+            except Exception:
                 raise AssistantErr(
                     "**ɴᴏ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ ғᴏᴜɴᴅ**\n\nᴩʟᴇᴀsᴇ ᴍᴀᴋᴇ sᴜʀᴇ ʏᴏᴜ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛ."
                 )

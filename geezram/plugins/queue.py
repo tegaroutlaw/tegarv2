@@ -1,6 +1,5 @@
 import asyncio
 import os
-from random import randint
 
 from pyrogram import filters
 from pyrogram.errors import FloodWait

@@ -8,10 +8,9 @@ import config
 from geezram import Carbon, YouTube, app
 from geezram.core.call import Anon
 from geezram.misc import db
-from geezram.utils.database import (add_active_chat,
-                                       add_active_video_chat,
+from geezram.utils.database import (add_active_video_chat,
                                        is_active_chat,
-                                       is_video_allowed, music_on)
+                                       is_video_allowed)
 from geezram.utils.exceptions import AssistantErr
 from geezram.utils.inline.play import (stream_markup, queue_markup,
                                           telegram_markup)

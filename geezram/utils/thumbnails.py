@@ -1,8 +1,6 @@
-import asyncio
 import os
 import random
 import re
-import textwrap
 import aiofiles
 import aiohttp
 from PIL import (Image, ImageDraw, ImageEnhance, ImageFilter,
@@ -58,7 +56,7 @@ async def gen_thumb(videoid):
                     duration = result["duration"]
                 except:
                     duration = "Unknown Mins"
-                thumbnail = result["thumbnails"][0]["url"].split("?")[0]
+                result["thumbnails"][0]["url"].split("?")[0]
                 try:
                     views = result["viewCount"]["short"]
                 except:
@@ -169,7 +167,7 @@ async def gen_qthumb(videoid):
                     duration = result["duration"]
                 except:
                     duration = "Unknown Mins"
-                thumbnail = result["thumbnails"][0]["url"].split("?")[0]
+                result["thumbnails"][0]["url"].split("?")[0]
                 try:
                     views = result["viewCount"]["short"]
                 except:
