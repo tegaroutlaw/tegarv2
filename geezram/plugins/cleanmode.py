@@ -8,7 +8,7 @@ from pyrogram.raw import types
 import config
 from config import adminlist, chatstats, clean, userstats
 from strings import get_command
-from geezram import app, userbot
+from geezram import app
 from geezram.misc import SUDOERS
 from geezram.utils.database import (get_active_chats,
                                        get_authuser_names, get_client,

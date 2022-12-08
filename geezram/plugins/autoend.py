@@ -1,11 +1,9 @@
 from pyrogram import filters
 
-import config
 from strings import get_command
 from geezram import app
 from geezram.misc import SUDOERS
 from geezram.utils.database import autoend_off, autoend_on
-from geezram.utils.decorators.language import language
 
 # Commands
 AUTOEND_COMMAND = get_command("AUTOEND_COMMAND")

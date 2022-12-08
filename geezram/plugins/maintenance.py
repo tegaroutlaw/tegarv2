@@ -7,7 +7,6 @@ from geezram.misc import SUDOERS
 from geezram.utils.database import (get_lang, is_maintenance,
                                        maintenance_off,
                                        maintenance_on)
-from geezram.utils.decorators.language import language
 
 # Commands
 MAINTENANCE_COMMAND = get_command("MAINTENANCE_COMMAND")

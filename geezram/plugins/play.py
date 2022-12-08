@@ -1,6 +1,5 @@
 import random
 import string
-from ast import ExceptHandler
 
 from pyrogram import filters
 from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto,
@@ -283,7 +282,7 @@ async def play_commnd(
         elif await Resso.valid(url):
             try:
                 details, track_id = await Resso.track(url)
-            except Exception as e:
+            except Exception:
                 return await mystic.edit_text(_["play_3"])
             streamtype = "youtube"
             img = details["thumb"]
