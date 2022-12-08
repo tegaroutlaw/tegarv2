@@ -1,4 +1,4 @@
-from geezram.core.bot import AnonXBot
+from geezram.core.bot import geezramBot
 from geezram.core.dir import dirr
 from geezram.core.git import git
 from geezram.core.userbot import Userbot
@@ -23,7 +23,7 @@ heroku()
 sudo()
 
 # Bot Client
-app = AnonXBot()
+app = geezramBot()
 
 # Assistant Client
 userbot = Userbot()
