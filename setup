@@ -51,7 +51,7 @@ packages(){
 			pprint "SUCCESS.\n\n" "cgreen"
 		else
 			pprint "FAIL.\n\n" "cred"
-			pprint "You need to install ffmpeg manually in order to deploy AnonX Music, exiting..\n" "cblue"
+			pprint "You need to install ffmpeg manually in order to deploy IzzyMusik, exiting..\n" "cblue"
 			exit 1
 		fi
 	fi
@@ -101,7 +101,7 @@ packages
 node
 repo
 installation
-pprint "\n\n\n\n\nAnonX Music Installation Completed!" "cgreen"
+pprint "\n\n\n\n\nizzymusik Installation Completed!" "cgreen"
 sleep 1
 clear
 
