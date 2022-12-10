@@ -72,33 +72,38 @@ def telegram_markup_timer(_, chat_id, played, dur):
     bar += line*(10-len(bar))
     
     buttons = [
+        #[
+        #    InlineKeyboardButton(
+        #        text=f"{played} {bar} {dur}",
+        #        callback_data="GetTimer",
+        #    )
+        #],
         [
             InlineKeyboardButton(
-                text=f"{played} {bar} {dur}",
-                callback_data="GetTimer",
-            )
+                text="Ram-pyro Ubot",
+                url="https://t.me/thisrama"
+            ),
+            InlineKeyboardButton(
+                text="Geez Projects Ubot", url="https://t.me/jasadeak"
+            ),
+        #    InlineKeyboardButton(
+        #        text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
+        #    ),
+        #    InlineKeyboardButton(
+         #       text="▢", callback_data=f"ADMIN Stop|{chat_id}"
+         #   ),
         ],
         [
             InlineKeyboardButton(
-                text="▷",
-                callback_data=f"ADMIN Resume|{chat_id}",
+                text="Geez Support", url=config.SUPPORT_CHANNEL,
             ),
             InlineKeyboardButton(
-                text="II", callback_data=f"ADMIN Pause|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
+                text="RAM Support", url=config.SUPPORT_GROUP
             ),
         ],
         [
             InlineKeyboardButton(
-                text="🥀 sᴜᴩᴩᴏʀᴛ 🥀", url=config.SUPPORT_GROUP
-            ),
-            InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
+                text="ᴄʟᴏsᴇ", callback_data="close"
             )
         ],
     ]
@@ -107,33 +112,38 @@ def telegram_markup_timer(_, chat_id, played, dur):
 
 def stream_markup(_, videoid, chat_id):
     buttons = [
+        #[
+        #    InlineKeyboardButton(
+        #        text=f"{played} {bar} {dur}",
+        #        callback_data="GetTimer",
+        #    )
+        #],
         [
             InlineKeyboardButton(
-                text="▷",
-                callback_data=f"ADMIN Resume|{chat_id}",
+                text="Ram-pyro Ubot",
+                url="https://t.me/thisrama"
             ),
             InlineKeyboardButton(
-                text="II", callback_data=f"ADMIN Pause|{chat_id}"
+                text="Geez Projects Ubot", url="https://t.me/jasadeak"
+            ),
+        #    InlineKeyboardButton(
+        #        text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
+        #    ),
+        #    InlineKeyboardButton(
+         #       text="▢", callback_data=f"ADMIN Stop|{chat_id}"
+         #   ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="Geez Support", url=config.SUPPORT_CHANNEL,
             ),
             InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
+                text="RAM Support", url=config.SUPPORT_GROUP
             ),
         ],
         [
             InlineKeyboardButton(
-                text="➕ ᴩʟᴀʏʟɪsᴛ ➕",
-                callback_data=f"add_playlist {videoid}",
-            ),
-            InlineKeyboardButton(
-                text="🥀 sᴜᴩᴩᴏʀᴛ 🥀", url=config.SUPPORT_GROUP
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
+                text="ᴄʟᴏsᴇ", callback_data="close"
             )
         ],
     ]
@@ -282,33 +292,38 @@ def slider_markup(
 
 def queue_markup(_, videoid, chat_id):
     buttons = [
+        #[
+        #    InlineKeyboardButton(
+        #        text=f"{played} {bar} {dur}",
+        #        callback_data="GetTimer",
+        #    )
+        #],
         [
             InlineKeyboardButton(
-                text="▷",
-                callback_data=f"ADMIN Resume|{chat_id}",
+                text="Ram-pyro Ubot",
+                url="https://t.me/thisrama"
             ),
             InlineKeyboardButton(
-                text="II", callback_data=f"ADMIN Pause|{chat_id}"
+                text="Geez Projects Ubot", url="https://t.me/jasadeak"
+            ),
+        #    InlineKeyboardButton(
+        #        text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
+        #    ),
+        #    InlineKeyboardButton(
+         #       text="▢", callback_data=f"ADMIN Stop|{chat_id}"
+         #   ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="Geez Support", url=config.SUPPORT_CHANNEL,
             ),
             InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
+                text="RAM Support", url=config.SUPPORT_GROUP
             ),
         ],
         [
             InlineKeyboardButton(
-                text="➕ ᴩʟᴀʏʟɪsᴛ ➕",
-                callback_data=f"add_playlist {videoid}",
-            ),
-            InlineKeyboardButton(
-                text="🥀 sᴜᴩᴩᴏʀᴛ 🥀", url=config.SUPPORT_GROUP
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
+                text="ᴄʟᴏsᴇ", callback_data="close"
             )
         ],
     ]
