@@ -1,5 +1,5 @@
 {
-    "name": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
+    "name": "musik izzy",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
     "logo": "https://telegra.ph/file/56d1760224589ee370186.jpg",
     "keywords": [
@@ -34,7 +34,7 @@
       },
       "MUSIC_BOT_NAME": {
         "description": "A name for your Music Bot. You can use special characters bot ko jhaat farak ni padega",
-        "value": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
+        "value": "Geez | RAM",
         "required": true
       },
       "OWNER_ID": {
@@ -77,7 +77,7 @@
       "formation": {
           "worker": {
               "quantity": 1,
-              "size": "free"
+              "size": "eco"
           }
       },
       "stack": "container"
