@@ -19,27 +19,13 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     bar += line*(10-len(bar))
 
     buttons = [
-        #[
-        #    InlineKeyboardButton(
-        #        text=f"{played} {bar} {dur}",
-        #        callback_data="GetTimer",
-        #    )
-        #],
         [
             InlineKeyboardButton(
-                text="Geez|RAM Support",
-                url="https://t.me/GeezRam"
-            ),
-            InlineKeyboardButton(
-                text="Geez|RAM Projects", url="https://t.me/UserbotCh"
-            ),
-        #    InlineKeyboardButton(
-        #        text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-        #    ),
-        #    InlineKeyboardButton(
-         #       text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-         #   ),
+               text=f"{played} {bar} {dur}",
+               callback_data="GetTimer",
+            )
         ],
+        
         [
             InlineKeyboardButton(
                 text="Channel", url=config.SUPPORT_CHANNEL,
@@ -72,26 +58,11 @@ def telegram_markup_timer(_, chat_id, played, dur):
     bar += line*(10-len(bar))
     
     buttons = [
-        #[
-        #    InlineKeyboardButton(
-        #        text=f"{played} {bar} {dur}",
-        #        callback_data="GetTimer",
-        #    )
-        #],
         [
             InlineKeyboardButton(
-                text="Geez|RAM Support",
-                url="https://t.me/GeezRam"
-            ),
-            InlineKeyboardButton(
-                text="Geez|RAM Projects", url="https://t.me/UserbotCh"
-            ),
-        #    InlineKeyboardButton(
-        #        text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-        #    ),
-        #    InlineKeyboardButton(
-         #       text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-         #   ),
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
+            )
         ],
         [
             InlineKeyboardButton(
@@ -112,33 +83,18 @@ def telegram_markup_timer(_, chat_id, played, dur):
 
 def stream_markup(_, videoid, chat_id):
     buttons = [
-        #[
-        #    InlineKeyboardButton(
-        #        text=f"{played} {bar} {dur}",
-        #        callback_data="GetTimer",
-        #    )
-        #],
         [
             InlineKeyboardButton(
-                text="Geez|RAM Support",
-                url="https://t.me/GeezRam"
-            ),
-            InlineKeyboardButton(
-                text="Geez|RAM Projects", url="https://t.me/UserbotCh"
-            ),
-        #    InlineKeyboardButton(
-        #        text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-        #    ),
-        #    InlineKeyboardButton(
-         #       text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-         #   ),
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
+            )
         ],
         [
             InlineKeyboardButton(
-                text="Geez Support", url=config.SUPPORT_CHANNEL,
+                text="Geez|RAM Projects", url=config.SUPPORT_CHANNEL,
             ),
             InlineKeyboardButton(
-                text="RAM Support", url=config.SUPPORT_GROUP
+                text="Geez|RAM Support", url=config.SUPPORT_GROUP
             ),
         ],
         [
@@ -292,27 +248,6 @@ def slider_markup(
 
 def queue_markup(_, videoid, chat_id):
     buttons = [
-        #[
-        #    InlineKeyboardButton(
-        #        text=f"{played} {bar} {dur}",
-        #        callback_data="GetTimer",
-        #    )
-        #],
-        [
-            InlineKeyboardButton(
-               text="Geez|RAM Support",
-                url="https://t.me/GeezRam"
-            ),
-            InlineKeyboardButton(
-                text="Geez|RAM Projects", url="https://t.me/UserbotCh"
-            ),
-        #    InlineKeyboardButton(
-        #        text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-        #    ),
-        #    InlineKeyboardButton(
-         #       text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-         #   ),
-        ],
         [
             InlineKeyboardButton(
                 text="Geez Support", url=config.SUPPORT_CHANNEL,
