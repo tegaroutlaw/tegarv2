@@ -27,11 +27,11 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         #],
         [
             InlineKeyboardButton(
-                text="Ram-pyro Ubot",
-                url="https://t.me/thisrama"
+                text="Geez|RAM Support",
+                url="https://t.me/GeezRam"
             ),
             InlineKeyboardButton(
-                text="Geez Projects Ubot", url="https://t.me/jasadeak"
+                text="Geez|RAM Projects", url="https://t.me/UserbotCh"
             ),
         #    InlineKeyboardButton(
         #        text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
@@ -42,10 +42,10 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="Geez Support", url=config.SUPPORT_CHANNEL,
+                text="Channel", url=config.SUPPORT_CHANNEL,
             ),
             InlineKeyboardButton(
-                text="RAM Support", url=config.SUPPORT_GROUP
+                text="Geez|RAM", url=config.SUPPORT_GROUP
             ),
         ],
         [
@@ -80,11 +80,11 @@ def telegram_markup_timer(_, chat_id, played, dur):
         #],
         [
             InlineKeyboardButton(
-                text="Ram-pyro Ubot",
-                url="https://t.me/thisrama"
+                text="Geez|RAM Support",
+                url="https://t.me/GeezRam"
             ),
             InlineKeyboardButton(
-                text="Geez Projects Ubot", url="https://t.me/jasadeak"
+                text="Geez|RAM Projects", url="https://t.me/UserbotCh"
             ),
         #    InlineKeyboardButton(
         #        text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
@@ -120,11 +120,11 @@ def stream_markup(_, videoid, chat_id):
         #],
         [
             InlineKeyboardButton(
-                text="Ram-pyro Ubot",
-                url="https://t.me/thisrama"
+                text="Geez|RAM Support",
+                url="https://t.me/GeezRam"
             ),
             InlineKeyboardButton(
-                text="Geez Projects Ubot", url="https://t.me/jasadeak"
+                text="Geez|RAM Projects", url="https://t.me/UserbotCh"
             ),
         #    InlineKeyboardButton(
         #        text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
@@ -300,11 +300,11 @@ def queue_markup(_, videoid, chat_id):
         #],
         [
             InlineKeyboardButton(
-                text="Ram-pyro Ubot",
-                url="https://t.me/thisrama"
+               text="Geez|RAM Support",
+                url="https://t.me/GeezRam"
             ),
             InlineKeyboardButton(
-                text="Geez Projects Ubot", url="https://t.me/jasadeak"
+                text="Geez|RAM Projects", url="https://t.me/UserbotCh"
             ),
         #    InlineKeyboardButton(
         #        text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
