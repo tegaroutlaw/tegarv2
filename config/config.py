@@ -21,12 +21,12 @@ OWNER_ID = list(map(int, getenv("OWNER_ID", "2003295492").split()))
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
 
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/hitokizzy/musikv2")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/hitokizzy/izzymusik")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/GeezSupport")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/ramsupportt")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/UserbotCh")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/GeezRAM")
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "180"))
 SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180"))
