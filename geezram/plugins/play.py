@@ -36,7 +36,7 @@ PLAY_COMMAND = get_command("PLAY_COMMAND")
     & ~filters.edited
     & ~BANNED_USERS
 )
-@AdminRightsCheck
+#@AdminRightsCheck
 @PlayWrapper
 async def play_commnd(
     client,
