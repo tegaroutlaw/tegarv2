@@ -24,7 +24,6 @@ from geezram.utils.inline.play import (livestream_markup,
 from geezram.utils.inline.playlist import botplaylist_markup
 from geezram.utils.logger import play_logs
 from geezram.utils.stream.stream import stream
-from geezram.utils.decorators import AdminRightsCheck
 
 # Command
 PLAY_COMMAND = get_command("PLAY_COMMAND")
