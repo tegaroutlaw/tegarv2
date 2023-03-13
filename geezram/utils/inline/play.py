@@ -14,25 +14,25 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     percentage = (played_sec / duration_sec) * 100
     geez = math.floor(percentage)
     if 0 < geez <= 10:
-        bar = "◉—————————"
+        pass
     elif 10 < geez < 20:
-        bar = "—◉————————"
+        pass
     elif 20 <= geez < 30:
-        bar = "——◉———————"
+        pass
     elif 30 <= geez < 40:
-        bar = "———◉——————"
+        pass
     elif 40 <= geez < 50:
-        bar = "————◉—————"
+        pass
     elif 50 <= geez < 60:
-        bar = "—————◉————"
+        pass
     elif 60 <= geez < 70:
-        bar = "——————◉———"
+        pass
     elif 70 <= geez < 80:
-        bar = "———————◉——"
+        pass
     elif 80 <= geez < 95:
-        bar = "————————◉—"
+        pass
     else:
-        bar = "—————————◉"
+        pass
 
     buttons = [
         #[
@@ -69,25 +69,25 @@ def telegram_markup_timer(_, chat_id, played, dur):
     percentage = (played_sec / duration_sec) * 100
     geez = math.floor(percentage)
     if 0 < geez <= 10:
-        bar = "◉—————————"
+        pass
     elif 10 < geez < 20:
-        bar = "—◉————————"
+        pass
     elif 20 <= geez < 30:
-        bar = "——◉———————"
+        pass
     elif 30 <= geez < 40:
-        bar = "———◉——————"
+        pass
     elif 40 <= geez < 50:
-        bar = "————◉—————"
+        pass
     elif 50 <= geez < 60:
-        bar = "—————◉————"
+        pass
     elif 60 <= geez < 70:
-        bar = "——————◉———"
+        pass
     elif 70 <= geez < 80:
-        bar = "———————◉——"
+        pass
     elif 80 <= geez < 95:
-        bar = "————————◉—"
+        pass
     else:
-        bar = "—————————◉"
+        pass
 
     buttons = [
         #[
