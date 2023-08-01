@@ -35,24 +35,16 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         pass
 
     buttons = [
-        #[
-        #    InlineKeyboardButton(
-        #        text=f"{played} {bar} {dur}",
-        #        callback_data="GetTimer",
-        #    )
-        #],
         [
             InlineKeyboardButton(
-                text="OOT GROUP", url=config.SUPPORT_CHANNEL,
-            ),
-            InlineKeyboardButton(
-                text="SUPPORT GROUP", url=config.SUPPORT_GROUP
-            ),
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
+            )
         ],
         [
             InlineKeyboardButton(
-                text="UBOT GRATIS", url=config.SUPPORT_GROUP,
-            ),
+                text="SUPPORT GROUP", url=config.SUPPORT_GROUP
+            )
         ],
         [
             InlineKeyboardButton(
@@ -90,24 +82,16 @@ def telegram_markup_timer(_, chat_id, played, dur):
         pass
 
     buttons = [
-        #[
-        #    InlineKeyboardButton(
-        #        text=f"{played} {bar} {dur}",
-        #        callback_data="GetTimer",
-        #    )
-        #],
         [
             InlineKeyboardButton(
-                text="OOT GROUP", url=config.SUPPORT_CHANNEL,
-            ),
-            InlineKeyboardButton(
-                text="SUPPORT GROUP", url=config.SUPPORT_GROUP
-            ),
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
+            )
         ],
         [
             InlineKeyboardButton(
-                text="UBOT GRATIS", url=config.SUPPORT_GROUP,
-            ),
+                text="SUPPORT GROUP", url=config.SUPPORT_GROUP
+            )
         ],
         [
             InlineKeyboardButton(
@@ -122,15 +106,7 @@ def stream_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="OOT GROUP", url=config.SUPPORT_CHANNEL,
-            ),
-            InlineKeyboardButton(
                 text="SUPPORT GROUP", url=config.SUPPORT_GROUP
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="UBOT GRATIS", url=config.SUPPORT_GROUP,
             ),
         ],
         [
@@ -146,16 +122,9 @@ def telegram_markup(_, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="OOT GROUP", url=config.SUPPORT_CHANNEL,
-            ),
-            InlineKeyboardButton(
                 text="SUPPORT GROUP", url=config.SUPPORT_GROUP
             ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="UBOT GRATIS", url=config.SUPPORT_GROUP,
-            ),
+        
         ],
         [
             InlineKeyboardButton(
@@ -183,11 +152,6 @@ def track_markup(_, videoid, user_id, channel, fplay):
         ],
         [
             InlineKeyboardButton(
-                text="UBOT GRATIS", url=config.SUPPORT_GROUP,
-            ),
-        ],
-        [
-            InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"],
                 callback_data=f"forceclose {videoid}|{user_id}",
             )
@@ -204,11 +168,6 @@ def livestream_markup(_, videoid, user_id, mode, channel, fplay):
             InlineKeyboardButton(
                 text=_["P_B_3"],
                 callback_data=f"LiveStream {videoid}|{user_id}|{mode}|{channel}|{fplay}",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="UBOT GRATIS", url=config.SUPPORT_GROUP,
             ),
         ],
         [
@@ -236,11 +195,6 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
             InlineKeyboardButton(
                 text=_["P_B_2"],
                 callback_data=f"AnonPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="UBOT GRATIS", url=config.SUPPORT_GROUP,
             ),
         ],
         [
@@ -273,11 +227,6 @@ def slider_markup(
             InlineKeyboardButton(
                 text=_["P_B_2"],
                 callback_data=f"MusicStream {videoid}|{user_id}|v|{channel}|{fplay}",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="UBOT GRATIS", url=config.SUPPORT_GROUP,
             ),
         ],
         [
@@ -316,16 +265,8 @@ def queue_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="OOT GROUP", url=config.SUPPORT_CHANNEL,
-            ),
-            InlineKeyboardButton(
                 text="SUPPORT GROUP", url=config.SUPPORT_GROUP
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="UBOT GRATIS", url=config.SUPPORT_GROUP,
-            ),
+            )
         ],
         [
             InlineKeyboardButton(
