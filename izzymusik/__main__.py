@@ -1,92 +1,60 @@
-# MIT License
-#
-# Copyright (c) 2023 AnonymousX1025
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-
 import asyncio
 import importlib
-import os
 
 from pyrogram import idle
+from pytgcalls.exceptions import NoActiveGroupCall
 
-from izzymusik import (
-    ASS_ID,
-    ASS_NAME,
-    ASS_USERNAME,
-    BOT_ID,
-    BOT_NAME,
-    BOT_USERNAME,
-    LOGGER,
-    SUNAME,
-    app,
-    app2,
-    pytgcalls,
-)
-from izzymusik.Modules import ALL_MODULES
+import config
+from izzymusik import LOGGER, app, userbot
+from izzymusik.core.call import Anony
+from izzymusik.misc import sudo
+from izzymusik.plugins import ALL_MODULES
+from izzymusik.utils.database import get_banned_users, get_gbanned
+from config import BANNED_USERS
 
 
-async def fallen_startup():
-    LOGGER.info("[•] Loading Modules...")
-    for module in ALL_MODULES:
-        importlib.import_module("izzymusik.Modules." + module)
-    LOGGER.info(f"[•] Loaded {len(ALL_MODULES)} Modules.")
-
-    LOGGER.info("[•] Refreshing Directories...")
-    if "downloads" not in os.listdir():
-        os.mkdir("downloads")
-    if "cache" not in os.listdir():
-        os.mkdir("cache")
-    LOGGER.info("[•] Directories Refreshed.")
-
+async def init():
+    if (
+        not config.STRING1
+        and not config.STRING2
+        and not config.STRING3
+        and not config.STRING4
+        and not config.STRING5
+    ):
+        LOGGER(__name__).error("Assistant client variables not defined, exiting...")
+        exit()
+    await sudo()
     try:
-        await app.send_message(
-            SUNAME,
-            f"✯ ᴍᴜsɪᴄ ʙᴏᴛ ✯\n\n𖢵 ɪᴅ : `{BOT_ID}`\n𖢵 ɴᴀᴍᴇ : {BOT_NAME}\n𖢵 ᴜsᴇʀɴᴀᴍᴇ : @{BOT_USERNAME}",
-        )
+        users = await get_gbanned()
+        for user_id in users:
+            BANNED_USERS.add(user_id)
+        users = await get_banned_users()
+        for user_id in users:
+            BANNED_USERS.add(user_id)
     except:
-        LOGGER.error(
-            f"{BOT_NAME} failed to send message at @{SUNAME}, please go & check."
-        )
-
+        pass
+    await app.start()
+    for all_module in ALL_MODULES:
+        importlib.import_module("izzymusik.plugins" + all_module)
+    LOGGER("izzymusik.plugins").info("Successfully Imported Modules...")
+    await userbot.start()
+    await Anony.start()
     try:
-        await app2.send_message(
-            SUNAME,
-            f"✯ ᴍᴜsɪᴄ ᴀss ✯\n\n𖢵 ɪᴅ : `{ASS_ID}`\n𖢵 ɴᴀᴍᴇ : {ASS_NAME}\n𖢵 ᴜsᴇʀɴᴀᴍᴇ : @{ASS_USERNAME}",
+        await Anony.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
+    except NoActiveGroupCall:
+        LOGGER("Geez|RAM").error(
+            "Please turn on the videochat of your log group\channel.\n\nStopping Bot..."
         )
+        exit()
     except:
-        LOGGER.error(
-            f"{ASS_NAME} failed to send message at @{SUNAME}, please go & check."
-        )
-
-    await app2.send_message(BOT_USERNAME, "/start")
-
-    LOGGER.info(f"[•] Bot Started As {BOT_NAME}.")
-    LOGGER.info(f"[•] Assistant Started As {ASS_NAME}.")
-
-    LOGGER.info(
-        "[•] startup completed"
-    )
-    await pytgcalls.start()
+        pass
+    await Anony.decorators()
+    LOGGER("Geez|RAM").info("izzy music started")
     await idle()
+    await app.stop()
+    await userbot.stop()
+    LOGGER("Geez|RAM").info("Stopping AnonX Music Bot...")
 
 
 if __name__ == "__main__":
-    asyncio.get_event_loop().run_until_complete(fallen_startup())
-    LOGGER.error("Music Bot Stopped.")
+    asyncio.get_event_loop().run_until_complete(init())
