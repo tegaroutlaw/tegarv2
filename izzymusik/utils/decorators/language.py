@@ -1,7 +1,8 @@
 from izzymusik.misc import SUDOERS
+from izzymusik import app
 from izzymusik.utils.database import get_lang, is_maintenance
 from strings import get_string
-
+from config import SUPPORT_CHAT
 
 def language(mystic):
     async def wrapper(_, message, **kwargs):
