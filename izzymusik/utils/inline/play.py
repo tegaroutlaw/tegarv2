@@ -51,7 +51,11 @@ def stream_markup_timer(_, chat_id, played, dur):
     elif 80 <= umm < 95:
         pass
     else:
+<<<<<<< HEAD
          pass
+=======
+        bar = "—————————◉"
+>>>>>>> f938049 (update)
     buttons = [
         [
             InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
@@ -60,13 +64,13 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
-        #[
-        #    InlineKeyboardButton(
-        #        text=f"{played} {bar} {dur}",
-        #        callback_data="GetTimer",
-        #    )
-        #],
-        [InlineKeyboardButton(text=_["Support"], url="https//t.me/GeezRam")],
+        [
+            InlineKeyboardButton(
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
+            )
+        ],
+        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
 
@@ -80,7 +84,7 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
-        [InlineKeyboardButton(text=_["Support"], url="https//t.me/GeezRam")],
+        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
 
