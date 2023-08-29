@@ -2,7 +2,7 @@ import math
 
 from pyrogram.types import InlineKeyboardButton
 
-from izzymusik.utils.formatters import time_to_seconds
+from AnonXMusic.utils.formatters import time_to_seconds
 
 
 def track_markup(_, videoid, user_id, channel, fplay):
@@ -33,29 +33,25 @@ def stream_markup_timer(_, chat_id, played, dur):
     percentage = (played_sec / duration_sec) * 100
     umm = math.floor(percentage)
     if 0 < umm <= 10:
-        pass
+        bar = "◉—————————"
     elif 10 < umm < 20:
-        pass
+        bar = "—◉————————"
     elif 20 <= umm < 30:
-        pass
+        bar = "——◉———————"
     elif 30 <= umm < 40:
-        pass
+        bar = "———◉——————"
     elif 40 <= umm < 50:
-        pass
+        bar = "————◉—————"
     elif 50 <= umm < 60:
-        pass
+        bar = "—————◉————"
     elif 60 <= umm < 70:
-        pass
+        bar = "——————◉———"
     elif 70 <= umm < 80:
-        pass
+        bar = "———————◉——"
     elif 80 <= umm < 95:
-        pass
+        bar = "————————◉—"
     else:
-<<<<<<< HEAD
-         pass
-=======
         bar = "—————————◉"
->>>>>>> f938049 (update)
     buttons = [
         [
             InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
