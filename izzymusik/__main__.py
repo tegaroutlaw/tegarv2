@@ -53,7 +53,7 @@ async def init():
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("Geez|RAM").info("Stopping AnonX Music Bot...")
+    LOGGER("Geez|RAM").info("Stopping Music Bot...")
 
 
 if __name__ == "__main__":
